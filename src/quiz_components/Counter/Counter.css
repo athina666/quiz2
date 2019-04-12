@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Lobster');
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    font-family: 'Bree+Serif', cursive;
+    background: palevioletred;
+    margin-bottom:15%;
+}
+
+.sek {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+
+button {
+    border-radius: 50%;
+    font-family: 'Lobster',cursive;
+    background: paleturquoise;
+    margin: 5px 0;
+    border:none;
+}
