@@ -1,5 +1,4 @@
 import React from 'react';
-
 import questions from './AllQuestions'
 import './Quiz.css'
 
@@ -9,7 +8,8 @@ export class Quiz extends React.Component {
   constructor(props) {
       super(props)
       this.state = {
-          questionNumber:0
+          questionNumber:0,
+          selectedAnswer:''
       }
   }
   nextQuestion = () => {
@@ -38,6 +38,16 @@ export class Quiz extends React.Component {
         questionNumber:this.state.questionNumber -1
     });
 }
+
+chooseAnswer = (e) => {
+    console.log(e.target.value);
+    this.setState({
+        selectedAnswer:e.target.value
+    })
+
+
+}
+
     render() {
        return(
            <div>
@@ -47,7 +57,8 @@ export class Quiz extends React.Component {
                     questions={questions}
                     nextQuestion={this.nextQuestion}
                     prevQuestion={this.prevQuestion}
-                    
+                    chooseAnswer={this.chooseAnswer}
+                    selectedAnswer={this.state.selectedAnswer}
                 />
               
            </div>
@@ -73,7 +84,9 @@ function  QuizBody (props) {
              <label>
             <input
               type="radio"
-              value="small"
+              value={answer}
+              onChange={props.chooseAnswer}
+              checked={answer === props.selectedAnswer}
             />
            {answer}
           </label>
@@ -94,9 +107,9 @@ function  QuizBody (props) {
 
     <div className='header'>
              
-        <span className="prev" onClick={props.prevQuestion}> Previous</span>
+        <button className="prev btn" onClick={props.prevQuestion}> Previous</button>
                     <div className="clear-box"><div id='infinity'></div></div>
-        <span className="next" onClick={props.nextQuestion}>Next</span>
+        <button className="next btn" onClick={props.nextQuestion}>Next</button>
     </div>
 </div>
 
@@ -109,17 +122,16 @@ function  QuizBody (props) {
                 {question.content}
             </h2>
             
-            <button>next</button>
     </div>
 
 {/* Answer */}
 
-<div className="main-container">
+<form className="main-container">
     <ul className="answers-container">
    
              {list}
     </ul>
-</div>
+</form>
 
 {/* Counter */}
 
