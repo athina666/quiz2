@@ -6,11 +6,49 @@ import './Quiz.css'
 
 
 export class Quiz extends React.Component {
+  constructor(props) {
+      super(props)
+      this.state = {
+          questionNumber:0
+      }
+  }
+  nextQuestion = () => {
+        const questionNumber = this.state.questionNumber;
+        const questionTotal = questions.length;
+
+        console.log({
+            questionNumber,
+            questionTotal
+        })
+        
+        if (questionNumber +1 >= questionTotal) {
+            return;
+        } 
+        this.setState({
+            questionNumber:questionNumber +1
+        });
+  }
+  prevQuestion = () => {
+    const questionNumber = this.state.questionNumber;
+    
+    if (questionNumber === 0) {
+        return;
+    } 
+    this.setState({
+        questionNumber:this.state.questionNumber -1
+    });
+}
     render() {
        return(
            <div>
               
-               <QuizBody questions={questions}/>
+               <QuizBody  
+                    questionNumber={this.state.questionNumber} 
+                    questions={questions}
+                    nextQuestion={this.nextQuestion}
+                    prevQuestion={this.prevQuestion}
+                    
+                />
               
            </div>
        );
@@ -23,16 +61,27 @@ export class Quiz extends React.Component {
 
 function  QuizBody (props) {
 
-const question = {
-            number:questions[0].number,
-            content:questions[0].question
+        const questionNumber = props.questionNumber
+
+        const question = {
+            number:questions[questionNumber].number,
+            content:questions[questionNumber].question
         }
         
-const list = props.questions[0].answers.map((answer) => {
-            return <li key={answer}>{answer}</li>
+        const list = props.questions[questionNumber].answers.map((answer) => {
+            return <li key={answer}>
+             <label>
+            <input
+              type="radio"
+              value="small"
+            />
+           {answer}
+          </label>
+            
+            </li>
         })
      
-return (
+    return (
 
 //    Header
     
@@ -45,9 +94,9 @@ return (
 
     <div className='header'>
              
-        <span className="prev">Previous</span>
+        <span className="prev" onClick={props.prevQuestion}> Previous</span>
                     <div className="clear-box"><div id='infinity'></div></div>
-        <span className="next">Next</span>
+        <span className="next" onClick={props.nextQuestion}>Next</span>
     </div>
 </div>
 
@@ -67,6 +116,7 @@ return (
 
 <div className="main-container">
     <ul className="answers-container">
+   
              {list}
     </ul>
 </div>
@@ -76,7 +126,7 @@ return (
 <div className="counter-container">
     <h2>Pytanie 
         <span className="sek"> 
-            {props.questions[0].number}
+            {props.questions[questionNumber].number}
         </span> z 
         <span className="sek"> {5} </span>  </h2>
 </div>

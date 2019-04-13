@@ -218,16 +218,6 @@ body {
 }
 
 
-.answers-container li::before {
-    content: "";
-    width: 17px;
-    height: 17px;
-    border: 1px solid rgb(155, 150, 155);
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 10px;
-    
 
-}
 
 
