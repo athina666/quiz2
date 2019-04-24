@@ -1,6 +1,6 @@
 import React from 'react';
 import questions from './AllQuestions'
-import './Quiz.css'
+// import './Quiz.css'
 
 
 
@@ -9,7 +9,7 @@ export class Quiz extends React.Component {
       super(props)
       this.state = {
           questionNumber:0,
-          selectedAnswer:''
+          selectedAnswer:'',
       }
   }
   nextQuestion = () => {
@@ -44,11 +44,26 @@ chooseAnswer = (e) => {
     this.setState({
         selectedAnswer:e.target.value
     })
-
-
 }
 
+checkAnswer = (e) => {
+    e.preventDefault();
+    const currentQuestion = questions.find((question) =>{
+     return question.number === this.state.questionNumber +1
+    });
+    console.log(currentQuestion);
+    console.log(questions[currentQuestion.number].number)
+    console.log('to jest odpowiedz',  this.state.selectedAnswer);
+
+  
+    
+}
+
+
+
     render() {
+        
+       
        return(
            <div>
               
@@ -59,6 +74,7 @@ chooseAnswer = (e) => {
                     prevQuestion={this.prevQuestion}
                     chooseAnswer={this.chooseAnswer}
                     selectedAnswer={this.state.selectedAnswer}
+                    checkAnswer={this.checkAnswer}
                 />
               
            </div>
@@ -70,7 +86,10 @@ chooseAnswer = (e) => {
 
 
 
+
 function  QuizBody (props) {
+
+       
 
         const questionNumber = props.questionNumber
 
@@ -93,10 +112,12 @@ function  QuizBody (props) {
             
             </li>
         })
+       
      
     return (
 
 //    Header
+       
     
     <div className="super-main-container">
         <div className='container-header'>
@@ -126,11 +147,13 @@ function  QuizBody (props) {
 
 {/* Answer */}
 
-<form className="main-container">
+<form onSubmit={props.checkAnswer} className="main-container">
     <ul className="answers-container">
    
              {list}
     </ul>
+    <div><button type="submit">Submit</button></div>
+    
 </form>
 
 {/* Counter */}
@@ -141,12 +164,65 @@ function  QuizBody (props) {
             {props.questions[questionNumber].number}
         </span> z 
         <span className="sek"> {5} </span>  </h2>
+      
 </div>
        
 
 </div>
     );
 } 
+
+// export class Counter extends React.Component {
+
+//     constructor (props) {
+   
+//       super(props)
+   
+//       this.state = {
+   
+//         seconds: 0
+   
+//       }
+   
+//       console.log('contructor')
+   
+//     }
+   
+   
+   
+//     componentDidMount() {
+   
+//       this.timer = setInterval(() => {
+   
+//         const newState = {
+   
+//           seconds: this.state.seconds + 1
+   
+//         }
+   
+//         this.setState(newState)
+   
+//       }, 1000)
+   
+//     }
+   
+   
+   
+//     componentWillUnmount() {
+   
+//       clearInterval(this.timer)
+   
+//     }
+   
+   
+   
+//     render () {
+   
+//       return <h2>Minęło {this.state.seconds} sekund.</h2>
+   
+//     }
+   
+//    }
 
 
 

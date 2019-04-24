@@ -43,7 +43,52 @@ const questions = [
           "Žižek"
       ],
       correct:1
-  }
+  },
+  {
+    number:6,
+    question: "Of all the consumer products, chewing gum is perhaps the most ridiculous: it literally has no nourishment – you just chew it to give yourself something to do with your stupid idiot western mouth.",
+    answers: [
+              "Brand", 
+              "Žižek"
+     ],
+    correct:0
+},
+{
+    number:7,
+    question:"„99% of people are boring idiots.",
+    answers: [
+        "Brand", 
+        "Žižek"
+    ],
+    correct:1
+},
+{
+    number:8,
+    question: "Nowadays, you can do anything that you want – anal, oral, fisting – but you need to be wearing gloves, condoms, protection." ,
+    answers: [
+        "Brand", 
+        "Žižek"
+    ],
+    correct:1
+},
+{
+    number:9,
+    question: "The threat today is not passivity but pseudo-activity, the urge to ‘be active’, to ‘participate’, to mask the Nothingness of what goes on."  ,
+    answers: [
+        "Brand", 
+        "Žižek"
+    ],
+    correct:1
+},
+{
+    number:10,
+    question: "You must not feel persecuted and examined. Liberate yourself from that idea that people are watching you."  ,
+    answers: [
+        "Brand", 
+        "Žižek"
+    ],
+    correct:0
+}
 ]
 
 export default questions;
