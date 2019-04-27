@@ -1,5 +1,5 @@
 import React from "react";
-import questions from "./AllQuestions";
+import questions from "../../AllQuestions";
 import "./Quiz.css";
 
 export class Quiz extends React.Component {
