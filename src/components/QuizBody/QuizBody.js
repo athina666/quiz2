@@ -1,5 +1,6 @@
 import React from 'react';
 import questions from "../../AllQuestions";
+import AnswersList from '../AnswersList/AnswersList'
 
 function QuizBody(props) {
   const questionNumber = props.questionNumber;
@@ -9,21 +10,7 @@ function QuizBody(props) {
     content: questions[questionNumber].question
   };
 
-  const list = props.questions[questionNumber].answers.map(answer => {
-    return (
-      <li key={answer}>
-        <label>
-          <input
-            type="radio"
-            value={answer}
-            onChange={props.chooseAnswer}
-            checked={answer === props.selectedAnswer}
-          />
-          {answer}
-        </label>
-      </li>
-    );
-  });
+
 
   return (
     //    Header
@@ -59,7 +46,13 @@ function QuizBody(props) {
       {/* Answer */}
 
       <form onSubmit={props.checkAnswer} className="main-container">
-        <ul className="answers-container">{list}</ul>
+        <ul className="answers-container">
+          <AnswersList
+            answers={props.questions[questionNumber].answers}
+            chooseAnswer={props.chooseAnswer}
+            selectedAnswer={props.selectedAnswer}
+          />
+        </ul>
         <div>
           <button type="submit">Submit</button>
         </div>
