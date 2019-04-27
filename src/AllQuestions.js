@@ -1,7 +1,7 @@
 const questions = [
   {
       number:1,
-      question: "Life is not a theme park, and if it is, the theme is death.",
+      question: '"Life is not a theme park, and if it is, the theme is death."',
       answers: [
                 "Brand", 
                 "Žižek"
@@ -10,7 +10,7 @@ const questions = [
   },
   {
       number:2,
-      question:"„There is going to be a revolution.",
+      question:'"There is going to be a revolution."',
       answers: [
           "Brand", 
           "Žižek"
@@ -19,7 +19,7 @@ const questions = [
   },
   {
       number:3,
-      question: "It is illusory to expect that one can actually change things by extending democracy." ,
+      question: '"It is illusory to expect that one can actually change things by extending democracy."' ,
       answers: [
           "Brand", 
           "Žižek"
@@ -28,7 +28,7 @@ const questions = [
   },
   {
       number:4,
-      question: "Why vote? We know it i's not going to make any difference."  ,
+      question: '"Why vote? We know it is not going to make any difference."'  ,
       answers: [
           "Brand", 
           "Žižek"

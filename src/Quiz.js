@@ -168,7 +168,7 @@ function  QuizBody (props) {
         <span className="sek"> 
             {props.questions[questionNumber].number}
         </span> z 
-        <span className="sek"> {5} </span>  </h2>
+        <span className="sek"> {10} </span>  </h2>
       
 </div>
        
@@ -177,57 +177,7 @@ function  QuizBody (props) {
     );
 } 
 
-// export class Counter extends React.Component {
 
-//     constructor (props) {
-   
-//       super(props)
-   
-//       this.state = {
-   
-//         seconds: 0
-   
-//       }
-   
-//       console.log('contructor')
-   
-//     }
-   
-   
-   
-//     componentDidMount() {
-   
-//       this.timer = setInterval(() => {
-   
-//         const newState = {
-   
-//           seconds: this.state.seconds + 1
-   
-//         }
-   
-//         this.setState(newState)
-   
-//       }, 1000)
-   
-//     }
-   
-   
-   
-//     componentWillUnmount() {
-   
-//       clearInterval(this.timer)
-   
-//     }
-   
-   
-   
-//     render () {
-   
-//       return <h2>Minęło {this.state.seconds} sekund.</h2>
-   
-//     }
-   
-//    }
 
 
 
