@@ -1,235 +1,208 @@
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Lobster');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Lobster");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 .mamory-card {
-    height: 50px;
-    width: 50px;
-    border: 2px solid black;
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
 }
 /* Counter*/
 
 .counter-container {
-    display: flex;
-    justify-content: center;
-    font-family: 'Bree+Serif', cursive;
-    background: #343233;
-    margin-bottom:15%;
+  display: flex;
+  justify-content: center;
+  font-family: "Bree+Serif", cursive;
+  background: #343233;
+  margin-bottom: 15%;
 }
 
 .sek {
-    font-family: 'Lobster', cursive;
-    font-size: 20px;
+  font-family: "Lobster", cursive;
+  font-size: 20px;
 }
 
 button {
-    border-radius: 50%;
-    font-family: 'Lobster',cursive;
-    background: #3b2b3e;
-    margin: 5px 0;
-    border:none;
-    color:#fff;
+  border-radius: 50%;
+  font-family: "Lobster", cursive;
+  background: #3b2b3e;
+  margin: 5px 0;
+  border: none;
+  color: #fff;
 }
-
-
 
 /* Header */
 
 body {
-    font-size: 10px;
+  font-size: 10px;
 }
 
-
 .container-header {
-
-    background: #3b2b3e;
-    padding: 1rem;
+  background: #3b2b3e;
+  padding: 1rem;
 }
 
 .container-header h1 {
-    font-family: 'Bree Serif', serif;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    text-align: center;
-    color: #FFD152;
-
+  font-family: "Bree Serif", serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #ffd152;
 }
 
-
 .container-header h2 {
-    font-family: 'Lobster', serif;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    text-align: center;
-    color: #FFD152;
-    
+  font-family: "Lobster", serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #ffd152;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    margin: 0;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin: 0;
+  align-items: center;
 }
 
 .clear-box {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
 
 span {
-    font-family: 'Lobster', cursive;
-    font-size: 1rem;
-    margin: 0;
-    cursor: pointer;
-
+  font-family: "Lobster", cursive;
+  font-size: 1rem;
+  margin: 0;
+  cursor: pointer;
 }
 
 .header::before,
 .header::after {
-    content: "";
-    width: 2rem;
-    height: 2rem;
-    float: left;
-    transition: .5s;
-    color: black;
-    box-shadow: -2px 2px 0 rgba(255, 255, 255, .5);
-
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  float: left;
+  transition: 0.5s;
+  color: black;
+  box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
 }
 
 .header:hover::before {
-    box-shadow: -2px 2px 0 rgba(10, 0, 0, 0.5);
+  box-shadow: -2px 2px 0 rgba(10, 0, 0, 0.5);
 }
 
 .header:hover::after {
-    box-shadow: -2px 2px 0 rgba(230, 8, 8, 0.5);
+  box-shadow: -2px 2px 0 rgba(230, 8, 8, 0.5);
 }
 
 .header::after {
-    transform: rotate(225deg);
-
+  transform: rotate(225deg);
 }
 
 .header::before {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 #infinity {
-    position: relative;
-    width: 50px;
-    height: 20px;
-    box-sizing: content-box;
-
+  position: relative;
+  width: 50px;
+  height: 20px;
+  box-sizing: content-box;
 }
 
 #infinity:before,
 #infinity:after {
-    content: "";
-    box-sizing: content-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 11px;
-    height: 11px;
-    border: 6px solid #3b2b3e;
-    border-radius: 40px 40px 0 40px;
-    transform: rotate(-45deg);
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  border: 6px solid #3b2b3e;
+  border-radius: 40px 40px 0 40px;
+  transform: rotate(-45deg);
 }
 
 #infinity:after {
-    left: auto;
-    right: 0;
-    border-radius: 50px 50px 50px 0;
-    transform: rotate(45deg);
+  left: auto;
+  right: 0;
+  border-radius: 50px 50px 50px 0;
+  transform: rotate(45deg);
 }
 
 /* Questions */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-   background:  #8D8273;
+  background: #8d8273;
 }
 
-
 .main-container {
-    
-    background: #3b2b3e;
-    max-width: 700px;
-    margin: 0 auto;
-    border-radius: 3px;
-    border:1px solid grey;
-    vertical-align: middle;
-    
-
+  background: #3b2b3e;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 3px;
+  border: 1px solid grey;
+  vertical-align: middle;
 }
 
 .main-container label {
- color:#FFD152;
- font-family: 'Lobster', cursive;
- font-size:20px;
+  color: #ffd152;
+  font-family: "Lobster", cursive;
+  font-size: 20px;
 }
 
 @media (min-width: 769px) {
-.main-container {
+  .main-container {
     margin: 2.5rem auto;
-} }
+  }
+}
 
 .question-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 0 0 40px ;
-    
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 0 0 40px;
 }
 
 .answers-container {
-    max-width: 700px;
-    margin: 0 auto;
-    border-radius: 4px;
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
-    
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .answers-container li {
-
-    list-style: none;
-    padding: 5px;
-    color: rgb(46, 37, 37);
-    margin-bottom: 10px;
-
+  list-style: none;
+  padding: 5px;
+  color: rgb(46, 37, 37);
+  margin-bottom: 10px;
 }
 
 .question-container {
-    background: #3b2b3e;
-    max-width: 700px;
-    margin: 0 auto;
-    border-radius: 3px;
-    border:1px solid grey;
-    vertical-align: middle;
-    margin-bottom: 10px;
+  background: #3b2b3e;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 3px;
+  border: 1px solid grey;
+  vertical-align: middle;
+  margin-bottom: 10px;
 }
 
 .question-container h2 {
-
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    color:#FFD152;
- 
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #ffd152;
 }
 
 .answers {
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
-
-
-
-
- 
