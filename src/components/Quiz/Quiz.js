@@ -80,6 +80,7 @@ export class Quiz extends React.Component {
           chooseAnswer={this.chooseAnswer}
           selectedAnswer={this.state.selectedAnswer}
           checkAnswer={this.checkAnswer}
+          score={this.state.score}
         />
       </div>
     );

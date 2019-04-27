@@ -1,6 +1,7 @@
 import React from 'react';
 import questions from "../../AllQuestions";
-import AnswersList from '../AnswersList/AnswersList'
+import AnswersList from '../AnswersList/AnswersList';
+import Score from '../Score/Score'
 
 function QuizBody(props) {
   const questionNumber = props.questionNumber;
@@ -28,6 +29,7 @@ function QuizBody(props) {
           </button>
           <div className="clear-box">
             <div id="infinity" />
+            <Score score={props.score}/>
           </div>
           <button className="next btn" onClick={props.nextQuestion}>
             Next
