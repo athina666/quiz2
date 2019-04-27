@@ -1,6 +1,6 @@
 import React from 'react';
 import questions from './AllQuestions'
-// import './Quiz.css'
+import './Quiz.css'
 
 
 
@@ -10,6 +10,7 @@ export class Quiz extends React.Component {
       this.state = {
           questionNumber:0,
           selectedAnswer:'',
+          score:0
       }
   }
   nextQuestion = () => {
@@ -40,7 +41,6 @@ export class Quiz extends React.Component {
 }
 
 chooseAnswer = (e) => {
-    console.log(e.target.value);
     this.setState({
         selectedAnswer:e.target.value
     })
@@ -51,12 +51,17 @@ checkAnswer = (e) => {
     const currentQuestion = questions.find((question) =>{
      return question.number === this.state.questionNumber +1
     });
-    console.log(currentQuestion);
-    console.log(questions[currentQuestion.number].number)
-    console.log('to jest odpowiedz',  this.state.selectedAnswer);
+        if (currentQuestion.answers[currentQuestion.correct] === this.state.selectedAnswer) {
+                    console.log('udzielono poprawnej odpowiedzi: ', this.state.selectedAnswer)
+                    console.log(this.state.score)
+                    this.setState({
+                    score: this.state.score + 1,
+                    });
+        } else {
+        console.log(this.state.selectedAnswer, ' to nie jest poprawna odpowiedź')
+        console.log(this.state.score)
+ }
 
-  
-    
 }
 
 
