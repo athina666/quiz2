@@ -67,6 +67,7 @@ export class Quiz extends React.Component {
       console.log(this.state.selectedAnswer, " to nie jest poprawna odpowiedź");
       console.log(this.state.score);
     }
+    this.nextQuestion();
   };
 
   render() {

@@ -23,17 +23,13 @@ function QuizBody(props) {
         </div>
 
         <div className="header">
-          <button className="prev btn" onClick={props.prevQuestion}>
-            {" "}
-            Previous
-          </button>
+         
+        
           <div className="clear-box">
             <div id="infinity" />
             <Score score={props.score}/>
           </div>
-          <button className="next btn" onClick={props.nextQuestion}>
-            Next
-          </button>
+         
         </div>
       </div>
 
