@@ -2,6 +2,7 @@ import React from "react";
 import questions from "../../AllQuestions";
 import "./Quiz.css";
 import QuizBody from "../QuizBody/QuizBody";
+import GameOver from "../GameOver/GameOver";
 
 export class Quiz extends React.Component {
   constructor(props) {
@@ -9,7 +10,8 @@ export class Quiz extends React.Component {
     this.state = {
       questionNumber: 0,
       selectedAnswer: "",
-      score: 0
+      score: 0,
+      text:""
     };
   }
 
@@ -70,7 +72,25 @@ export class Quiz extends React.Component {
     this.nextQuestion();
   };
 
+  renderText = () => {
+   
+    if (this.state.score < 5) {
+      console.log('jestes fujara');
+    
+    } else {
+      console.log('znasz sie');
+   
+    }
+  }
+
   render() {
+    const questionNumber = this.state.questionNumber;
+    const questionTotal = questions.length;
+
+    if (questionNumber + 1 >= questionTotal) {
+      return <GameOver score={this.state.score} para={this.renderText()}/>
+    }
+    
     return (
       <div>
         <QuizBody
