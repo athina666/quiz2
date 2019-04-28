@@ -85,14 +85,14 @@ renderText = () => {
    
   if (this.state.score < 5) {
     console.log('jestes fujara');
-    this.setState ({
-            text: "jestes fujara"
-            });
+    // this.setState ({
+    //         text: "jestes fujara"
+    //         });
   } else {
     console.log('znasz sie');
-    this.setState({
-          text: "znajdz se zajecie"
-        });
+    // this.setState({
+    //       text: "znajdz se zajecie"
+    //     });
   }
 }
 
