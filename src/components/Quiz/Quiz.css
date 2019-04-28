@@ -1,11 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Bree+Serif|Lobster");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-.mamory-card {
-  height: 50px;
-  width: 50px;
-  border: 2px solid black;
-}
+
 /* Counter*/
 
 .counter-container {
@@ -19,6 +15,7 @@
 .sek {
   font-family: "Lobster", cursive;
   font-size: 20px;
+  color:#ffd152;
 }
 
 button {
@@ -28,6 +25,13 @@ button {
   margin: 5px 0;
   border: none;
   color: #fff;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 /* Header */
@@ -78,6 +82,23 @@ span {
   cursor: pointer;
 }
 
+.img_zizek, .img_brand {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: #ffd152 solid 2px;
+}
+
+.img_zizek {
+  background-image: url('../../images/zizek_laüy.jpg');
+  background-size: cover;
+}
+
+.img_brand {
+  background-image: url('../../images/brand.jpg');
+  background-size: cover;
+}
+
 .header::before,
 .header::after {
   content: "";
@@ -103,7 +124,7 @@ span {
 
 .header::before {
   transform: rotate(45deg);
-}
+} 
 
 #infinity {
   position: relative;
@@ -121,7 +142,7 @@ span {
   left: 0;
   width: 11px;
   height: 11px;
-  border: 6px solid #3b2b3e;
+  border: 6px solid #c73351;
   border-radius: 40px 40px 0 40px;
   transform: rotate(-45deg);
 }
@@ -165,9 +186,11 @@ body {
 }
 
 .question-container {
+  margin-top: 50px;
   max-width: 800px;
   margin: 0 auto;
   padding: 0 0 0 40px;
+  height:107px;
 }
 
 .answers-container {

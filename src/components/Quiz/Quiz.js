@@ -19,10 +19,7 @@ export class Quiz extends React.Component {
     const questionNumber = this.state.questionNumber;
     const questionTotal = questions.length;
 
-    console.log({
-      questionNumber,
-      questionTotal
-    });
+   
 
     if (questionNumber + 1 >= questionTotal) {
       return;
@@ -57,42 +54,62 @@ export class Quiz extends React.Component {
       currentQuestion.answers[currentQuestion.correct] ===
       this.state.selectedAnswer
     ) {
-      console.log(
-        "udzielono poprawnej odpowiedzi: ",
-        this.state.selectedAnswer
-      );
-      console.log(this.state.score);
+     
+      
       this.setState({
         score: this.state.score + 1
       });
     } else {
-      console.log(this.state.selectedAnswer, " to nie jest poprawna odpowiedź");
-      console.log(this.state.score);
+      
     }
     this.nextQuestion();
   };
+ 
+//   renderText = () => {
 
-  renderText = () => {
+//     if (this.state.score < 5) {
+//         console.log('jestes fujara')
+//     this.setState ({
+//       text: "jestes fujara"
+//       });
+//     } else {
+//   console.log('jestes mega propsem')
+//   this.setState({
+//     text: "jestes mega propsikiem"
+//   });
+// }
+// }
+
+
+renderText = () => {
    
-    if (this.state.score < 5) {
-      console.log('jestes fujara');
-    
-    } else {
-      console.log('znasz sie');
-   
-    }
+  if (this.state.score < 5) {
+    console.log('jestes fujara');
+    this.setState ({
+            text: "jestes fujara"
+            });
+  } else {
+    console.log('znasz sie');
+    this.setState({
+          text: "znajdz se zajecie"
+        });
   }
+}
+
+
 
   render() {
     const questionNumber = this.state.questionNumber;
     const questionTotal = questions.length;
+    const scoreText = this.state.text
 
     if (questionNumber + 1 >= questionTotal) {
-      return <GameOver score={this.state.score} para={this.renderText()}/>
-    }
-    
+      return <GameOver score={this.state.score} para={scoreText} renderTex={this.renderText()}/>
+}
+  
     return (
       <div>
+      
         <QuizBody
           questionNumber={this.state.questionNumber}
           questions={questions}

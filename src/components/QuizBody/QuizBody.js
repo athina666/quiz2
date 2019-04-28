@@ -23,13 +23,13 @@ function QuizBody(props) {
         </div>
 
         <div className="header">
-         
-        
+          <div className="img_zizek"></div>    
           <div className="clear-box">
             <div id="infinity" />
             <Score score={props.score}/>
+           
           </div>
-         
+          <div className="img_brand"></div>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ function QuizBody(props) {
             selectedAnswer={props.selectedAnswer}
           />
         </ul>
-        <div>
+        <div className="btn">
           <button type="submit">Submit</button>
         </div>
       </form>
@@ -64,7 +64,7 @@ function QuizBody(props) {
           <span className="sek">
             {props.questions[questionNumber].number}
           </span>{" "}
-          z<span className="sek"> {5} </span>{" "}
+          z<span className="sek"> {questions.length} </span>{" "}
         </h2>
       </div>
     </div>

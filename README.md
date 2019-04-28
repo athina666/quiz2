@@ -1,4 +1,56 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Quiz
+
+
+
+Krótki opis do czego służy projekt.
+
+
+
+# Technologie:
+
+- React
+
+- ES6
+
+- json-server
+
+- [react-create-app](https://github.com/facebook/create-react-app)
+
+
+
+# Podstawowe funkcjonalności:
+
+
+
+???
+
+
+
+# To do:
+
+
+
+- lista rzeczy, których nie udało się zrobić ale warto aby się pojawiły w najbliższym czasie
+
+
+
+
+
+
+
+Opisane w krokach co należy zrobić aby uruchomić projekt
+
+
+
+- git clone https://github.com/athina666/quiz2
+
+- cd 'quiz2'
+
+- npm install
+
+- npm start 
+
 
 ## Available Scripts
 
